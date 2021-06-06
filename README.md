@@ -1,17 +1,15 @@
-##Introduction:
-
-## Deploying Django to AWS ECS with Terraform
+## Introduction:
 
 I have created a sample web application named "django-edu-app" which exposes a http endpoint. The application is deployed in AWS and uses Terraform for end to end automation.
 
-#Tool Versions:
+## Tool Versions:
 
 Django v3.1
 Docker v19.03.12
 Python v3.8.5
 Terraform v0.13.0
 
-# I have tried to automate the  below:
+## I have tried to automate the  below:
 
 Set up the following AWS infrastructure with the below:
 
@@ -90,5 +88,4 @@ Set up the following AWS infrastructure with the below:
     $ python update-ecs.py --cluster=production-cluster --service=production-service
 
 
-Note: With the limited time I had, I cloud create this much only. I have neither used "AWS code pipeline" or "Fargate" so far. I have used jenkins extensively all these days but would love to explore code pipeline for future use. 
-    ```
+Note: With the limited time I had, I cloud create this much only. I have neither used "AWS code pipeline" or "Fargate" so far. I have used jenkins extensively all these days but would love to explore code pipeline for future use.
