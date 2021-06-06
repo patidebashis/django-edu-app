@@ -38,13 +38,13 @@ Set up the following AWS infrastructure with the below:
 
 1. Install Terraform
 
-1. Sign up for an AWS account
+2. Sign up for an AWS account
 
-1. Create two ECR repositories, `django-app` and `nginx`.
+3. Create two ECR repositories, `django-app` and `nginx`.
 
-1. Fork/Clone
+4. Fork/Clone
 
-1. Build the Django and Nginx Docker images and push them up to ECR:
+5. Build the Django and Nginx Docker images and push them up to ECR:
 
     ```sh
     $ cd app
@@ -57,9 +57,9 @@ Set up the following AWS infrastructure with the below:
     $ cd ..
     ```
 
-1. Update the variables in *terraform/variables.tf*.
+6. Update the variables in *terraform/variables.tf*.
 
-1. Set the following environment variables, init Terraform, create the infrastructure:
+7. Set the following environment variables, init Terraform, create the infrastructure:
 
     ```sh
     $ cd terraform
@@ -71,17 +71,17 @@ Set up the following AWS infrastructure with the below:
     $ cd ..
     ```
 
-1. Terraform will output an ALB domain. Create a CNAME record for this domain
+8. Terraform will output an ALB domain. Create a CNAME record for this domain
    for the value in the `allowed_hosts` variable.
 
-1. Open the EC2 instances overview page in AWS. Use `ssh ec2-user@<ip>` to
+9. Open the EC2 instances overview page in AWS. Use `ssh ec2-user@<ip>` to
    connect to the instances until you find one for which `docker ps` contains
    the Django container. Run
    `docker exec -it <container ID> python manage.py migrate`.
 
-1. Now you can open `https://your.domain.com/admin`. Note that `http://` may not  work.
+10. Now you can open `https://your.domain.com/admin`. Note that `http://` may not  work.
 
-1. You can also run the following script to bump the Task Definition and update the Service:
+11. You can also run the following script to bump the Task Definition and update the Service:
 
     ```sh
     $ cd deploy
