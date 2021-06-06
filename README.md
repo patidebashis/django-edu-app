@@ -4,7 +4,7 @@ I have created a sample web application named "django-edu-app" which exposes a h
 
 ## Tool Versions:
 
-Django v3.1
+Django v3.1 
 Docker v19.03.12
 Python v3.8.5
 Terraform v0.13.0
